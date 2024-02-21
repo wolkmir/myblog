@@ -1,17 +1,16 @@
-<!DOCTYPE html>
+{% load static %}
 <html>
     <head>
-        <link rel="stylesheet" href="post_list.css">
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'basic.css' %}">
     </head>
     <body>
-        <div class="left_menu">
-           
-        </div>
-        <div class="main_area"> man1</div>
         <div>
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
-        
+
         {% for post in posts %}
             <div>
                 <p>published: {{ post.published_date }}</p>
